@@ -57,27 +57,7 @@ npm run build
 
 The output will be in the `dist` directory, ready to be served by your web server.
 
-## Project Structure
 
-```
-├── public
-│   └── assets
-│       ├── E1.jpg
-│       ├── E2.jpg
-│       └── E3.jpg
-├── src
-│   ├── components
-│   │   └── Events.jsx
-│   ├── styles
-│   │   └── Events.module.css
-│   ├── App.jsx
-│   └── main.jsx
-├── .gitignore
-├── index.html
-├── package.json
-├── README.md
-└── vite.config.js
-```
 
 ## Contributing
 
