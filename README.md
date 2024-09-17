@@ -69,4 +69,4 @@ This project is licensed under the MIT License.
 
 ---
 
-Feel free to adjust any details to better fit your project!
+
