@@ -1,0 +1,150 @@
+/* NavBar.module.css */
+.navbar {
+    padding: 1rem 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #CAF0F8; /* Pale Blue */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: #CAF0F8; /* Keep the same color on scroll */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 2.2rem;
+    color: #023E8A; /* Dark Blue */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adding a stronger text shadow */
+}
+
+.logo i {
+    color: #90E0EF; /* Light Blue for any icon in the logo */
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navLinks li {
+    margin-left: 2rem;
+    position: relative;
+}
+
+.navLinks a {
+    font-size: 1.5rem;
+    color: #023E8A; /* Dark Blue */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+    border-radius: 0.3rem; /* Adding border radius for rounded corners */
+}
+
+.navLinks a:hover {
+    color: #FFFFFF; /* White text on hover */
+    background-color: rgba(144, 224, 239, 0.2); /* Light Blue with transparency */
+}
+
+.menuIcon {
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    background: #CAF0F8; /* Pale Blue */
+    color: #023E8A; /* Dark Blue */
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1); /* Adding shadow to menu icon */
+}
+
+.menuIcon:hover {
+    background-color: #90E0EF; /* Light Blue on hover */
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+.mobileMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 20rem;
+    border: 1px solid #0077B6; /* Medium Blue for border */
+    background: #CAF0F8; /* Pale Blue */
+    transform: scale(0.95);
+    opacity: 0;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.mobileMenu.active {
+    display: block;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.mobileMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobileMenu ul li {
+    margin: 0;
+}
+
+.mobileMenu ul li a {
+    display: block;
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: #023E8A; /* Dark Blue */
+    transition: color 0.3s ease;
+    border-radius: 0.3rem; /* Adding border radius for rounded corners */
+}
+
+.mobileMenu ul li a:hover {
+    color: #FFFFFF; /* White text on hover */
+    background-color: rgba(144, 224, 239, 0.2); /* Light Blue with transparency */
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    .navbar {
+        padding: 1rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    .menuIcon {
+        display: block;
+    }
+    .navLinks {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
